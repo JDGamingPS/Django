@@ -25,6 +25,25 @@
                 <div>
                   Numero de personas: {{nro_personas}}
                 </div>
+
+                <div>
+                  <a href="new_persona">Agregar Persona</a>
+                </div>
+
+                <div>
+                  <ul>
+                    {% for persona in personas %}
+                    <li>
+                      Persona: {{persona.id}}: 
+                      {{persona.nombre}} 
+                      {{persona.apellido}} 
+                      {{persona.email}}
+                      <a href="detalle_persona/{{persona.id}}">Ver detalle</a>
+                    </li>
+
+                    {% endfor %}
+                  </ul>
+                </div>
                 
             </div>
             

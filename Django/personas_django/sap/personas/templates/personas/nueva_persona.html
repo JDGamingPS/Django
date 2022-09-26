@@ -18,34 +18,21 @@
     <!-- place navbar here -->
   </header>
   <main>
+    
     <div class="container">
         <div class="row">
-            <div class="col">
 
-              Detalle Persona
-              
-      
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">id</th>
-                      <th scope="col">Nombre</th>
-                      <th scope="col">Apellido</th>
-                      <th scope="col">Email</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">{{persona.id}}</th>
-                      <td>{{persona.nombre}}</td>
-                      <td>{{persona.apellido}}</td>
-                      <td>{{persona.email}}</td>
-                    </tr>
-                  </tbody>
-                </table>
+          <form method="post">
+            <h1 class="text-bg-danger">Agregar Persona</h1>
+            <table>
+              {{formaPersona}}
 
-                <a href="{% url 'index' %}">Regresar al inicio</a><!-- regresa al inicio del index o inicio -->
-            </div>
+            </table>
+
+            <button type="submit">Envia</button>
+            {% csrf_token %}
+                
+          </form>
         </div>
     </div>
   </main>

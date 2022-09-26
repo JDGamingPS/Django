@@ -9,7 +9,7 @@ def bienvenido(consulta):
     nro_personas = Persona.objects.count()
     personas = Persona.objects.all()
     #mensajes = {'msj1': 'valor mensaje 1', 'msj2': 'valor mensaje 2'}
-    return render(consulta, 'bienvenido.html', {'nro_personas': nro_personas}) #<- mensajes
+    return render(consulta, 'bienvenido.html', {'nro_personas': nro_personas, 'personas': personas}) #<- mensajes
 
 def despedirse(consulta):
     return HttpResponse("despedida de Django")
